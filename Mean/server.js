@@ -18,7 +18,7 @@ mongoose.connect('mongodb://localhost:27017/company'); // connect to our databas
 
 //Load models
 
-var Company = require('./models/company');
+var Company = require('./app/models/company');
 
 
 
@@ -105,6 +105,6 @@ router.route('/company/:company_id')
 
 
 //ha ide beírom h /api - akkor a routok a localhost/api/.. -on lesz elérhetõ
-app.use('/', router);
+app.use('/api', router);
 app.listen(port);
 console.log('Magic happens on port ' + port);
