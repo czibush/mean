@@ -21,22 +21,47 @@
     <div class="container">
 
 
-        <!-- COMPANY LIST -->
-        <div id="company-list" class="row">
-            <div class="col-sm-4 col-sm-offset-4">
-
-                <!-- LOOP OVER THE TODOS IN $scope.companies -->
-                <div class="checkbox" ng-repeat="company in companies">
-                    <label>
-                        {{ company.name }}
-                    </label>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
                 </div>
 
-            </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">All companies</a></li>
+                        <li><a href="#">Add new company</a></li>
+                        <li><a href="#">Delete company</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+
+        <div class="jumbotron">
+            <h1>All Companies</h1>
         </div>
+            <!-- COMPANY LIST -->
+            <div id="company-list" class="row">
+                <div class="col-md-12">
+                    <!-- LOOP OVER THE Companies IN $scope.companies -->
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="company in companies">{{ company.name }} | {{company.address}}</li>
+                    </ul>
+                </div>
+            </div>
+
+
 
 
     </div>
-
 </body>
 </html>
