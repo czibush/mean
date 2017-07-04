@@ -54,7 +54,7 @@
                 <div class="col-md-12">
                     <!-- LOOP OVER THE Companies IN $scope.companies -->
                     <ul class="list-group">
-                        <li class="list-group-item" ng-repeat="company in companies">{{ company.name }} | {{company.address}}</li>
+                        <li class="list-group-item" ng-repeat="company in companies"><strong>Name:</strong> {{ company.name }} | <strong>Address:</strong> {{company.address}} | <strong>Created:</strong> {{company.Created_date}} | <strong>Status:</strong> {{company.status[0]}} | <strong>ID:</strong> {{company._id}} <a ng-click="deleteCompany(company._id)">Delete Company</a></li>
                     </ul>
                 </div>
             </div>
