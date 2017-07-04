@@ -1,0 +1,9 @@
+{
+  "name": "mean",
+  "version": "0.0.0",
+  "description": "Mean",
+  "main": "server.js",
+  "author": {
+    "name": "Czibus"
+  }
+}
